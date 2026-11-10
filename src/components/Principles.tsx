@@ -42,19 +42,19 @@ export const Principles: React.FC = () => {
         </div>
 
         {/* 4 Distinct Editorial Principles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 pt-12 lg:pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 pt-10 sm:pt-14">
           {OPERATING_PRINCIPLES.map((principle, index) => (
             <motion.div
               key={principle.number}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.12 }}
-              className="group p-8 sm:p-10 bg-white border-2 border-[#111111] shadow-[6px_6px_0px_0px_#111111] hover:shadow-[10px_10px_0px_0px_#111111] transition-all duration-300 flex flex-col justify-between"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group p-6 sm:p-8 lg:p-10 bg-white border-2 border-[#111111] shadow-[4px_4px_0px_0px_#111111] sm:shadow-[6px_6px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Header Row */}
-                <div className="flex items-center justify-between pb-6 border-b border-[#111111]/10">
+                <div className="flex items-center justify-between pb-5 border-b border-[#111111]/10">
                   <span className="font-mono text-2xl sm:text-3xl font-extrabold tracking-tighter text-[#111111]">
                     {principle.number}
                   </span>
@@ -68,19 +68,19 @@ export const Principles: React.FC = () => {
                   <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-[#111111] tracking-tight uppercase">
                     {principle.title}
                   </h3>
-                  <p className="font-display font-semibold text-lg text-[#111111] mt-2 leading-snug">
+                  <p className="font-display font-semibold text-base sm:text-lg text-[#111111] mt-2 leading-snug">
                     {principle.summary}
                   </p>
                 </div>
 
                 {/* Detail */}
-                <p className="text-sm text-[#77766F] font-sans leading-relaxed mt-4">
+                <p className="text-xs sm:text-sm text-[#77766F] font-sans leading-relaxed mt-4">
                   {principle.detail}
                 </p>
               </div>
 
               {/* Actionable Benchmark Question */}
-              <div className="mt-8 pt-6 border-t border-[#111111]/10 bg-[#F5F3EC] -mx-8 sm:-mx-10 -mb-8 sm:-mb-10 p-6 sm:p-8">
+              <div className="mt-8 pt-6 border-t border-[#111111]/10 bg-[#F5F3EC] -mx-6 sm:-mx-8 lg:-mx-10 -mb-6 sm:-mb-8 lg:-mb-10 p-5 sm:p-6 lg:p-8">
                 <span className="font-mono text-[10px] tracking-widest uppercase text-[#77766F] block mb-1">
                   THE DAILY LITMUS TEST
                 </span>

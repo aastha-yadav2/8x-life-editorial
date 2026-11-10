@@ -35,16 +35,16 @@ export const HiringPhilosophy: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 border-b border-[#111111]/15 bg-[#F5F3EC] relative">
+    <section className="py-16 sm:py-24 lg:py-32 border-b border-[#111111]/15 bg-[#F5F3EC] relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-12 border-b border-[#111111]/15">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-10 sm:pb-12 border-b border-[#111111]/15">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#77766F] mb-3">
               <span className="w-2 h-2 bg-[#FF704D]" />
               <span>// RECRUITING REVOLUTION</span>
             </div>
-            <h2 className="font-display font-extrabold text-[clamp(2.5rem,6.5vw,5.5rem)] leading-[0.92] tracking-tighter text-[#111111] uppercase select-none">
+            <h2 className="font-display font-extrabold text-[clamp(2.25rem,6vw,5.5rem)] leading-[0.92] tracking-tighter text-[#111111] uppercase select-none">
               SHOW US YOUR WORK.<br />
               <span className="text-[#111111] relative inline-block">
                 NOT JUST YOUR CV.
@@ -57,14 +57,14 @@ export const HiringPhilosophy: React.FC = () => {
             <p className="text-base sm:text-lg font-display font-semibold text-[#111111] leading-snug">
               Skills are demonstrated through what you make, solve and ship.
             </p>
-            <p className="mt-2 text-sm text-[#77766F] font-sans leading-relaxed">
+            <p className="mt-2 text-xs sm:text-sm text-[#77766F] font-sans leading-relaxed">
               We want to understand how you think, how you approach problems and what you can actually do. Opportunities span 8x core teams and our global partner company network.
             </p>
           </div>
         </div>
 
         {/* 4 Sequential Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-12 lg:pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-10 sm:pt-14">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (
@@ -73,8 +73,8 @@ export const HiringPhilosophy: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.12 }}
-                className="bg-white border-2 border-[#111111] p-6 sm:p-8 flex flex-col justify-between shadow-[5px_5px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] transition-all"
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white border-2 border-[#111111] p-6 sm:p-8 flex flex-col justify-between shadow-[4px_4px_0px_0px_#111111] sm:shadow-[5px_5px_0px_0px_#111111] hover:shadow-[7px_7px_0px_0px_#111111] transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between pb-4 border-b border-[#111111]/10">

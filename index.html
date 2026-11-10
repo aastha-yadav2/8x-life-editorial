@@ -22,6 +22,51 @@
 
     <!-- Favicon SVG -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111111'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='18' fill='%23D7FF45'%3E8x%3C/text%3E%3C/svg%3E" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://8x.life/#organization",
+          "name": "8x",
+          "url": "https://8x.life",
+          "description": "Human orchestration company managing 250k+ people in 50+ countries across marketing, engineering, and research.",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Jaka Bavdek",
+              "jobTitle": "Co-founder, CEO",
+              "url": "https://jakabavdek.com/"
+            },
+            {
+              "@type": "Person",
+              "name": "Theo Bui",
+              "jobTitle": "Co-founder, CTO",
+              "url": "https://www.theobui.com/"
+            }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/8x-life/",
+            "https://www.8x.careers/join",
+            "https://8x.social",
+            "https://8x.business"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://8x.life/#website",
+          "url": "https://8x.life",
+          "name": "8x — Built by People Who Make Things Happen",
+          "publisher": {
+            "@id": "https://8x.life/#organization"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-background text-primary antialiased selection:bg-accent selection:text-primary">
     <div id="root"></div>

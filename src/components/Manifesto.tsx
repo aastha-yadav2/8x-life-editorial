@@ -53,8 +53,8 @@ export const Manifesto: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 onClick={() => setActivePoint(idx)}
-                className={`py-8 sm:py-10 transition-all duration-300 cursor-pointer group ${
-                  isActive ? 'bg-white px-6 sm:px-8 border-l-4 border-l-[#111111] -mx-4 sm:mx-0' : 'hover:bg-white/60 px-4 sm:px-6'
+                className={`py-6 sm:py-10 transition-all duration-300 cursor-pointer group ${
+                  isActive ? 'bg-white px-5 sm:px-8 border-l-4 border-l-[#111111]' : 'hover:bg-white/60 px-4 sm:px-6'
                 }`}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">

@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <h1 className="font-display font-extrabold text-[clamp(2.75rem,7.5vw,6.5rem)] leading-[0.92] tracking-tighter text-[#111111] uppercase select-none">
+              <h1 className="font-display font-extrabold text-[clamp(2.25rem,7vw,6.5rem)] leading-[0.92] tracking-tighter text-[#111111] uppercase select-none break-words">
                 THE FUTURE<br />
                 IS BUILT BY<br />
                 <span className="text-[#111111] relative inline-block">
@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
             className="lg:col-span-5 relative mt-6 lg:mt-0"
           >
             {/* Editorial Frame with high-contrast architectural & human craft visual */}
-            <div className="relative border-2 border-[#111111] bg-[#111111] p-3 sm:p-4 shadow-[8px_8px_0px_0px_#111111]">
+            <div className="relative border-2 border-[#111111] bg-[#111111] p-3 sm:p-4 shadow-[4px_4px_0px_0px_#111111] sm:shadow-[8px_8px_0px_0px_#111111]">
               {/* Monospace frame header */}
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/20 text-[#D7FF45] font-mono text-xs">
                 <div className="flex items-center gap-2">

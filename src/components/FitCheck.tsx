@@ -19,67 +19,67 @@ export const FitCheck: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-[#0E0E0E] text-[#F5F3EC] relative border-b border-[#D7FF45]/20 overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-[#0E0E0E] text-[#F5F3EC] relative border-b-2 border-t-2 border-[#111111] overflow-hidden">
       {/* Dark editorial grid background */}
       <div className="absolute inset-0 editorial-grid-dark opacity-40 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-[#D7FF45]/20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 sm:pb-12 border-b border-[#D7FF45]/20">
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#D7FF45] mb-3">
               <AlertTriangle className="w-3.5 h-3.5 text-[#D7FF45]" />
               <span>// CANDIDATE SELF-SELECTION GATE</span>
             </div>
-            <h2 className="font-display font-extrabold text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.92] tracking-tighter uppercase select-none text-white">
+            <h2 className="font-display font-extrabold text-[clamp(2.25rem,5.5vw,5rem)] leading-[0.92] tracking-tighter uppercase select-none text-white">
               THIS ISN'T FOR EVERYONE.<br />
               <span className="text-[#D7FF45]">THAT'S THE POINT.</span>
             </h2>
           </div>
 
           <div className="max-w-md">
-            <p className="text-sm sm:text-base text-white/70 font-sans leading-relaxed">
+            <p className="text-xs sm:text-base text-white/70 font-sans leading-relaxed">
               We save your time and ours. If you require rigid hand-holding or layers of approval before touching production, 8x will feel uncomfortable.
             </p>
           </div>
         </div>
 
         {/* Two-Column Comparison Matrix */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 pt-12 lg:pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 pt-10 sm:pt-14">
           {/* Column 1: YOU MAY THRIVE HERE IF */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="border-2 border-[#D7FF45] bg-[#161616] p-8 sm:p-10 shadow-[8px_8px_0px_0px_#D7FF45]"
+            transition={{ duration: 0.5 }}
+            className="border-2 border-[#D7FF45] bg-[#161616] p-6 sm:p-8 lg:p-10 shadow-[4px_4px_0px_0px_#D7FF45] sm:shadow-[8px_8px_0px_0px_#D7FF45]"
           >
-            <div className="flex items-center justify-between pb-6 border-b border-[#D7FF45]/30">
+            <div className="flex items-center justify-between pb-5 border-b border-[#D7FF45]/30">
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-none bg-[#D7FF45] text-[#111111] flex items-center justify-center font-bold font-mono text-sm">
                   +
                 </div>
-                <h3 className="font-display font-extrabold text-xl sm:text-2xl text-[#D7FF45] uppercase tracking-tight">
+                <h3 className="font-display font-extrabold text-lg sm:text-xl text-[#D7FF45] uppercase tracking-tight">
                   YOU MAY THRIVE HERE IF:
                 </h3>
               </div>
               <span className="font-mono text-xs text-[#D7FF45]/70">ALIGNMENT</span>
             </div>
 
-            <ul className="mt-8 space-y-6">
+            <ul className="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
               {thrivePoints.map((point) => (
-                <li key={point} className="flex items-start gap-4">
+                <li key={point} className="flex items-start gap-3 sm:gap-4">
                   <div className="mt-1 flex-shrink-0 w-5 h-5 bg-[#D7FF45]/20 border border-[#D7FF45] flex items-center justify-center text-[#D7FF45]">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
-                  <span className="text-base sm:text-lg text-white/90 font-sans font-medium leading-snug">
+                  <span className="text-sm sm:text-base text-white/90 font-sans font-medium leading-snug">
                     {point}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-10 pt-6 border-t border-white/10">
+            <div className="mt-8 pt-5 border-t border-white/10">
               <p className="font-mono text-xs text-[#D7FF45]/80">
                 → OUTCOME: Rapid autonomy, high leverage, zero bureaucracy.
               </p>
@@ -91,35 +91,35 @@ export const FitCheck: React.FC = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="border-2 border-[#FF704D] bg-[#161616] p-8 sm:p-10 shadow-[8px_8px_0px_0px_#FF704D]"
+            transition={{ duration: 0.5, delay: 0.12 }}
+            className="border-2 border-[#FF704D] bg-[#161616] p-6 sm:p-8 lg:p-10 shadow-[4px_4px_0px_0px_#FF704D] sm:shadow-[8px_8px_0px_0px_#FF704D]"
           >
-            <div className="flex items-center justify-between pb-6 border-b border-[#FF704D]/30">
+            <div className="flex items-center justify-between pb-5 border-b border-[#FF704D]/30">
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-none bg-[#FF704D] text-[#111111] flex items-center justify-center font-bold font-mono text-sm">
                   −
                 </div>
-                <h3 className="font-display font-extrabold text-xl sm:text-2xl text-[#FF704D] uppercase tracking-tight">
+                <h3 className="font-display font-extrabold text-lg sm:text-xl text-[#FF704D] uppercase tracking-tight">
                   THINK TWICE IF:
                 </h3>
               </div>
               <span className="font-mono text-xs text-[#FF704D]/70">MISALIGNMENT</span>
             </div>
 
-            <ul className="mt-8 space-y-6">
+            <ul className="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
               {thinkTwicePoints.map((point) => (
-                <li key={point} className="flex items-start gap-4">
+                <li key={point} className="flex items-start gap-3 sm:gap-4">
                   <div className="mt-1 flex-shrink-0 w-5 h-5 bg-[#FF704D]/20 border border-[#FF704D] flex items-center justify-center text-[#FF704D]">
                     <X className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
-                  <span className="text-base sm:text-lg text-white/80 font-sans font-medium leading-snug">
+                  <span className="text-sm sm:text-base text-white/80 font-sans font-medium leading-snug">
                     {point}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-10 pt-6 border-t border-white/10">
+            <div className="mt-8 pt-5 border-t border-white/10">
               <p className="font-mono text-xs text-[#FF704D]/80">
                 → OUTCOME: Frustration with speed, constant ambiguity, and direct peer critique.
               </p>

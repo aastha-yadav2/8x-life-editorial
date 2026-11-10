@@ -8,12 +8,27 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
+      // Scrollspy calculation
+      const sections = ['roles', 'people', 'how-we-work', 'manifesto'];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el && el.offsetTop <= scrollPosition) {
+          setActiveSection('#' + sectionId);
+          return;
+        }
+      }
+      setActiveSection('');
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -81,16 +96,26 @@ export const Navbar: React.FC<NavbarProps> = () => {
           className="hidden md:flex items-center gap-8 lg:gap-10"
           aria-label="Main Navigation"
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleLinkClick(e, link.href)}
-              className="text-sm font-medium text-[#111111]/80 hover:text-[#111111] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#111111] hover:after:w-full after:transition-all after:duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href;
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className={`text-sm font-medium transition-colors relative py-1 flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded ${
+                  isActive
+                    ? 'text-[#111111] font-semibold after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#111111]'
+                    : 'text-[#111111]/70 hover:text-[#111111] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#111111] hover:after:w-full after:transition-all after:duration-200'
+                }`}
+              >
+                {isActive && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF704D]" />
+                )}
+                <span>{link.label}</span>
+              </a>
+            );
+          })}
         </nav>
 
         {/* Right: Primary Action CTA */}
@@ -129,17 +154,25 @@ export const Navbar: React.FC<NavbarProps> = () => {
             <span className="font-mono text-xs uppercase tracking-widest text-[#77766F]">
               // Navigation Menu
             </span>
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => handleLinkClick(e, link.href)}
-                className="font-display text-3xl font-bold text-[#111111] hover:text-[#FF704D] tracking-tight transition-colors flex items-center justify-between border-b border-[#111111]/10 pb-4"
-              >
-                <span>{link.label}</span>
-                <span className="font-mono text-xs text-[#77766F]">→</span>
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href;
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                  className={`font-display text-2xl sm:text-3xl font-bold tracking-tight transition-colors flex items-center justify-between border-b border-[#111111]/10 pb-4 ${
+                    isActive ? 'text-[#FF704D]' : 'text-[#111111] hover:text-[#FF704D]'
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    {isActive && <span className="w-2 h-2 rounded-full bg-[#FF704D]" />}
+                    {link.label}
+                  </span>
+                  <span className="font-mono text-xs text-[#77766F]">→</span>
+                </a>
+              );
+            })}
           </div>
 
           <div className="pt-8 border-t border-[#111111]/10 space-y-4">
