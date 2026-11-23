@@ -1,71 +1,79 @@
-# 8X.LIFE — Premium Editorial Redesign
+# 8X.LIFE — Digital Editorial Redesign
 
-A production-quality, responsive website redesign for [8x.life](https://8x.life), inspired by the editorial confidence, human storytelling, and bold typographic rhythm of [e2.vc](https://e2.vc).
-
-> **Core Concept:** *"BUILT BY PEOPLE WHO MAKE THINGS HAPPEN."*  
-> **Brand Mission:** AI changes what's possible. People change what happens next. At 8x, we bring together ambitious people, intelligent systems, and relentless execution to turn ideas into real-world outcomes.
+A high-performance digital editorial experience for **[8x.life](https://8x.life)**, designed around human orchestration in the era of automated intelligence. The project emphasizes editorial typography, strict contrast ratios, fluid responsiveness, and high-agency candidate self-selection.
 
 ---
 
-## 🚀 Live Preview & Architecture
+## Core Thesis & Identity
 
-- **Framework:** React 19 + TypeScript + Vite
-- **Styling:** Tailwind CSS (Custom editorial palette, fluid typography with `clamp()`)
-- **Animation:** Framer Motion (Restrained text reveals, scroll springs, infinite ticker)
-- **Icons:** Lucide React
-- **Typography:**
-  - Headlines: Space Grotesk (Heavy weights, tight tracking)
-  - Body: Inter (Clear editorial legibility)
-  - Metadata & Tickers: IBM Plex Mono (Technical coordinates, timestamps, badges)
-- **Color Palette:**
-  - Background Canvas: `#F5F3EC`
-  - Primary Ink: `#111111`
-  - Accent Lime: `#D7FF45`
-  - Secondary Coral: `#FF704D`
-  - Muted Slate: `#77766F`
-  - Dark Surface: `#0E0E0E` / `#161616`
+> **Central Premise:** *"AI changes what is possible. People determine what happens next."*  
+> At 8x, decentralized human networks across 50+ countries work alongside intelligent systems to execute outcomes across marketing distribution, engineering automation, and parallel qualitative research.
 
----
+### Visual Architecture
+* **Canvas Background:** `#F5F3EC` (Warm archival paper tone)
+* **Primary Ink:** `#111111` (Deep saturated black)
+* **High-Voltage Accent:** `#D7FF45` (Electric lime for focal interactions)
+* **Warm Secondary:** `#FF704D` (Terracotta coral for badges and metadata)
+* **Muted Neutral:** `#77766F` (Slate grey for secondary annotations)
+* **Dark Contrast Surfaces:** `#0E0E0E` / `#161616` (Used for honest candidate fit gates)
 
-## 📑 Completed Sections
-
-1. **Header Navigation:** Sticky frosted header with custom 8x SVG mark, anchor links (`#manifesto`, `#how-we-work`, `#people`, `#roles`), mobile drawer with accessible focus handling, and direct link to live careers.
-2. **Hero Section:** Editorial metadata stamp (`LIFE AT 8X / GLOBAL / REMOTE-FIRST`), oversized headline typography, supporting copy, dual CTAs, high-contrast engineering craftsmanship composition, and active coordinate indicators.
-3. **Infinite Marquee Ticker:** `THINK BIGGER / MOVE FASTER / OWN THE OUTCOME / BUILD WHAT MATTERS`.
-4. **Company Scale:** Verified metrics: `50+ COUNTRIES`, `250K+ HUMANS MANAGED`, `300M+ ORGANIC REACH`, with clear context across Marketing, Engineering, and Research.
-5. **The 8x Manifesto:** 5 sequential tenets with animated typography, horizontal separators, and deep-link to `8x.life/manifesto`.
-6. **How We Work:** 4 proposed editorial principles (Ownership, Execution, Curiosity, Accountability) with daily litmus test prompts.
-7. **The Human Side:** Verified co-founders Jaka Bavdek (CEO) and Theo Bui (CTO) with official profile links to `jakabavdek.com` and `theobui.com`, and global timezone anchors.
-8. **The Honest Fit Check:** Visually contrasting dark section (`bg-[#0E0E0E] text-[#D7FF45]`) featuring radical self-selection gates (*You May Thrive Here If* vs. *Think Twice If*).
-9. **Hiring Philosophy:** *"SHOW US YOUR WORK. NOT JUST YOUR CV."* Explaining the 4-step evidence-first hiring model and immediate practical challenge.
-10. **Open Opportunities:** 10 verified live roles synced from `8x.careers/join` with filtering between 8x Core Roles and Global Launch Internships.
-11. **Final Call to Action:** Imposing *"MAKE SOMETHING THAT MATTERS"* closing banner with *"FIND YOUR ROLE"* CTA.
-12. **Footer:** Comprehensive editorial directory linking to all official 8x destinations, ecosystem platforms (`8x.social`, `8x.business`, `8x.careers`), and legal notices.
+### Typographic System
+* **Display & Titles:** `Space Grotesk` (Tight negative tracking, fluid `clamp()` sizing)
+* **Editorial Body:** `Inter` (Optimized readability and structured line heights)
+* **Technical Labels:** `IBM Plex Mono` (Uppercase coordinates, timestamps, and badges)
 
 ---
 
-## 🛠️ Local Development
+## Architecture & Section Directory
 
-### Prerequisites
-- Node.js 18+ (tested on Node v24.13.0)
-- npm 9+ (tested on npm 11.6.2)
+```
+src/
+├── components/
+│   ├── Navbar.tsx             # Frosted sticky header, scrollspy tracking, mobile drawer
+│   ├── Hero.tsx               # Editorial headline, coordinate stamp, craft composition
+│   ├── Marquee.tsx            # Continuous horizontal ticker for operating tenets
+│   ├── CompanyScale.tsx       # Verified volume metrics (50+ countries, 250k+ managed)
+│   ├── Manifesto.tsx          # 5-step thesis breakdown with sequential disclosures
+│   ├── Principles.tsx         # 4 operational principles with daily litmus questions
+│   ├── People.tsx             # Verified co-founder profiles (Jaka Bavdek, Theo Bui)
+│   ├── FitCheck.tsx           # Dark self-selection matrix ("Thrive Here" vs "Think Twice")
+│   ├── HiringPhilosophy.tsx   # Evidence-first 4-phase evaluation workflow
+│   ├── Opportunities.tsx      # Synced live positions from 8x.careers/join
+│   ├── FinalCTA.tsx           # Imposing closing call to action
+│   └── Footer.tsx             # Official web directory, platform nodes, and legal info
+├── data/
+│   ├── manifesto.ts           # The 5 foundational manifesto statements
+│   ├── principles.ts          # Operational principles and daily litmus tests
+│   └── roles.ts               # Live role specifications and application routes
+└── styles/
+    └── globals.css            # Base typography, grid overlays, reduced-motion rules
+```
 
-### Setup
+---
+
+## Getting Started
+
+### System Requirements
+* Node.js runtime (v18.0.0 or higher recommended)
+* npm package manager (v9.0.0 or higher)
+
+### Installation & Local Run
 ```bash
-# Clone or navigate to workspace
-cd d:/8x
+# Clone the repository
+git clone https://github.com/aastha-yadav2/8x-life-editorial.git
+cd 8x-life-editorial
 
-# Install dependencies
+# Install project dependencies
 npm install
 
-# Start development server
+# Launch Vite local development server
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Visit `http://localhost:5173` to view the running site.
 
-### Production Build & Verification
+### Production Build & Static Preview
 ```bash
-# Build TypeScript and Vite bundle
+# Verify TypeScript types and generate production bundle
 npm run build
 
 # Preview production build locally
@@ -74,41 +82,38 @@ npm run preview
 
 ---
 
-## 🌐 Vercel Deployment Instructions
+## Quality Assurance & Verification
 
-### Method 1: Deploy with Vercel CLI
-```bash
-# Install Vercel CLI globally (if not already installed)
-npm install -g vercel
+The project includes responsive layout testing and build verification across standard device widths:
 
-# Deploy to preview
-vercel
-
-# Deploy to production
-vercel --prod
-```
-
-### Method 2: Deploy via Git (GitHub / GitLab / Bitbucket)
-1. Push this repository to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: 8x.life premium editorial redesign"
-   git remote add origin <your-repo-url>
-   git push -u origin main
-   ```
-2. In the [Vercel Dashboard](https://vercel.com/new):
-   - Import your repository.
-   - Framework Preset: **Vite** (auto-detected).
-   - Root Directory: `./`.
-   - Build Command: `npm run build`.
-   - Output Directory: `dist`.
-3. Click **Deploy**. Vercel will build and assign a global production URL (e.g., `https://8x-life.vercel.app`).
+* **Desktop (1440px):** Full-bleed asymmetrical layout with editorial framing.
+* **Tablet (768px):** Clean two-column grid wrapping and preserved typography.
+* **Mobile (390px & 360px):** Responsive `clamp()` typography, zero horizontal overflow, and accessible touch targets.
+* **Reduced Motion:** Fully honors `prefers-reduced-motion: reduce` by dampening animations and transitions.
+* **Automated CI:** GitHub Actions workflow executing type checking and production builds on all pushes to `main`.
 
 ---
 
-## 🔬 Research & Documentation
-- Comprehensive audit: [`/research/website-audit.md`](./research/website-audit.md)
-- Design decisions & e2.vc comparison: [`/research/design-decisions.md`](./research/design-decisions.md)
-- Responsive screenshots: [`/research/screenshots/`](./research/screenshots/)
+## Deployment
 
+The project is structured for zero-configuration deployment on platforms such as Vercel, Netlify, or Cloudflare Pages.
+
+### Vercel Deployment via CLI
+```bash
+# Deploy to preview environment
+npx vercel
+
+# Deploy directly to production
+npx vercel --prod
+```
+
+---
+
+## Repository Documentation
+
+* [Research & Website Audit](research/website-audit.md) — Baseline audit of legacy 8x web properties.
+* [Design Decisions](research/design-decisions.md) — Detailed rationale for typographic and layout choices.
+* [Contributing Guidelines](CONTRIBUTING.md) — Workflow and pull request conventions.
+* [Changelog](CHANGELOG.md) — Historical release and refinement log.
+* [Security Policy](SECURITY.md) — Vulnerability reporting and supported environments.
+* [License](LICENSE) — Open source software license terms.
